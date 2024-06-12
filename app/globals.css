@@ -18,4 +18,27 @@
 
     --color-border-color: 0 0% 100% / 0.15;
   }
+
+  body,
+  html {
+    font-family:
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      'Helvetica Neue',
+      sans-serif;
+  }
+}
+
+body {
+  @apply relative z-0 bg-background bg-[url(/hero-glow.svg)] bg-contain bg-top bg-no-repeat font-sans text-foreground antialiased after:absolute after:inset-0 after:-z-10 after:bg-[url:theme(backgroundImage.noise)] after:opacity-10 after:contrast-125 after:saturate-0;
+}
+
+div#__next {
+  overflow: visible;
+}
+
+/* TODO: Remove this once Root no longer applies background white */
+body > div {
+  background: transparent !important;
 }
