@@ -17,6 +17,7 @@
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
+    "@tailwindcss/container-queries": "^0.1.1",
     "@trivago/prettier-plugin-sort-imports": "^4.2.0",
     "@types/node": "17.0.37",
     "@types/react": "18.2.60",

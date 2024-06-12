@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --color-background: 220 30% 4%;
+    --color-foreground: 0 0% 100%;
+
+    --color-muted-background: 220 17% 27%;
+    --color-muted-foreground: 0 0% 100% / 0.7;
+
+    --color-primary: 323 81% 57%;
+    --color-primary-highlight: 323 81% 79%;
+
+    --color-accent: 248 89% 62%;
+    --color-accent-highlight: 248 89% 86%;
+
+    --color-border-color: 0 0% 100% / 0.15;
+  }
+}
