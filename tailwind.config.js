@@ -31,6 +31,14 @@ module.exports = {
         mono: ['var(--font-mono)'],
       },
       keyframes: {
+        rotate: {
+          from: {
+            transform: 'rotateZ(0deg) translate3d(-50%,-50%,0)',
+          },
+          to: {
+            transform: 'rotateZ(360deg) translate3d(-50%,-50%,0)',
+          },
+        },
         collapse: {
           from: { height: 'var(--radix-accordion-content-height)' },
           to: { height: 0 },
@@ -99,6 +107,7 @@ module.exports = {
       },
       animation: {
         collapse: 'collapse 400ms cubic-bezier(1, 0, 0.25, 1)',
+        rotate: 'rotate 2000ms linear infinite',
         expand: 'expand 400ms cubic-bezier(1, 0, 0.25, 1)',
         glowBoxHighlight: 'glowBoxHighlight 5s linear infinite',
         scrollLeft: 'scrollLeft var(--marquee-duration) linear infinite',
