@@ -31,14 +31,23 @@ type Props = {
   footerGroups?: FooterGroup[]
 }
 const Footer = forwardRef(function Footer(
-  { className, footerGroups }: Props,
+  { className, footerGroups, logoImage }: Props,
   ref: Ref<HTMLDivElement>
 ) {
   return (
     <footer ref={ref} className={clsx(className, '@container')}>
       <div className="flex w-full flex-col gap-x-10 gap-y-8 rounded-2xl bg-muted-background/50 p-6 ring-1 ring-foreground/20 @sm:rounded-3xl @xl:flex-row @xl:gap-x-16 @xl:p-8">
         <Link href="/">
-          <Image src="/logo-placeholder.svg" alt="Logo" width={100} height={38} priority />
+          {logoImage && (
+            <Image
+              className="w-[40px]"
+              src={logoImage.url}
+              alt="Logo"
+              width={logoImage.dimensions.width}
+              height={logoImage.dimensions.height}
+              priority
+            />
+          )}
         </Link>
         <div className="flex flex-1 flex-wrap gap-y-8 @lg:gap-y-10">
           {footerGroups?.map((group, groupIndex) => {
